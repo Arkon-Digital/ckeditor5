@@ -31,6 +31,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -60,7 +61,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	SourceEditing
+	SourceEditing,
+	Font
 ];
 
 // Editor configuration.
@@ -74,13 +76,18 @@ ClassicEditor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'numberedList',
+			'blockQuote',
 			'|',
 			'outdent',
 			'indent',
 			'|',
-			'uploadImage',
-			'blockQuote',
+			'fontSize',
+			'fontFamily',
+			'fontColor',
+			'fontBackgroundColor',
+			'|',
 			'insertTable',
+			'uploadImage',
 			'mediaEmbed',
 			'|',
 			'sourceEditing',
